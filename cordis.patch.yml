@@ -1,0 +1,9 @@
+# 工具箱（DSH Bundle patch）
+# 作为 bundle 合入 profile 时，自动插入本插件行。
+#
+# 插件分两半：
+#   - 宿主半区（lib/index.js）注册 /toolbox/config 读写接口，配置落在 $DSH_HOME/toolbox/config.json
+#   - 客户端半区（lib/client.js）在左栏加「工具箱」入口，并用 Tab 容器内嵌各个工具的页面
+- insert:
+    - id: dsh-toolbox
+      name: 'dsh-toolbox'
